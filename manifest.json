@@ -1,0 +1,16 @@
+{
+    "name": "ZoomAcross extension",
+    "description" : "Set default zoom level across all pages/tabs",
+    "version": "1.0",
+    "browser_action": {
+      "default_popup": "index.html"
+    },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "permissions": [
+        "storage"
+    ],
+    "manifest_version": 2
+  }
