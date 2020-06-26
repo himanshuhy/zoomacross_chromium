@@ -1,4 +1,4 @@
-let defzoom = 1.25
+let defzoom = 1.00
 
 
 chrome.storage.local.set({defzoom}, function() {
@@ -20,7 +20,7 @@ chrome.tabs.onHighlighted.addListener((tab) => {
     chrome.storage.local.get(['defzoom'], function (result) {
         chrome.tabs.getZoom(tab.id, (zfactor)=>{
             if (zfactor != result.defzoom){
-                chrome.tabs.setZoom(tab.id, result.defzoom)
+                chrome.tabs.setZoom(tab.tabIds[0], result.defzoom)
             }
         })
     });
